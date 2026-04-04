@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Vulnerability - Vulnexus</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <a href="index.html" style="text-decoration: none;"><h2>Vulnexus</h2></a>
+    <div class="nav-links">
+        <a href="bounty.html">Bug Bounty Program</a>
+        <a href="reports.html">View Reports</a>
+    </div>
+</nav>
+
+<!-- HEADER -->
+<header>
+    <h1>Submit a Vulnerability</h1>
+    <p>
+        Help us secure Vulnexus. Fill out the form below with detailed 
+        steps and proof-of-concept to responsibly disclose a security issue.
+    </p>
+</header>
+
+<!-- FORM SECTION -->
+<section class="form-section">
+    <h2>Submit a New Vulnerability</h2>
+
+    <form id="reportForm">
+        <!-- New Smart Toggle -->
+        <div class="radio-toggle-container">
+            <label class="radio-toggle">
+                <input type="radio" name="submissionType" value="vuln" checked>
+                <span class="toggle-label">Vulnerability Report</span>
+            </label>
+            <label class="radio-toggle">
+                <input type="radio" name="submissionType" value="bounty">
+                <span class="toggle-label">Bug Bounty Submission</span>
+            </label>
+        </div>
+
+        <!-- ALWAYS VISIBLE -->
+        <label for="domain">Domain / Target Domain</label>
+        <input type="text" id="domain" placeholder="example.com" required>
+
+        <label for="name">Researcher Name / Handle</label>
+        <input type="text" id="name" placeholder="John Doe / @johndoe" required>
+        
+        <label for="email">Contact Email</label>
+        <input type="email" id="email" placeholder="security@example.com" required>
+
+        <label for="url">Affected URL / Endpoint</label>
+        <input type="text" id="url" placeholder="https://example.com/api/v1/user" required>
+
+        <label for="description">Steps to Reproduce</label>
+        <textarea id="description" placeholder="1. Go to...\n2. Input payload...\n3. Observe..." required></textarea>
+
+        <label for="impact">Business / Security Impact</label>
+        <textarea id="impact" style="min-height: 80px;" placeholder="Explain how an attacker could abuse this..." required></textarea>
+
+        <!-- BOUNTY ONLY FIELDS -->
+        <div class="bounty-fields" id="bountySection">
+            <label for="bugType">Bug Type</label>
+            <select id="bugType">
+                <option value="" disabled selected>Select a vulnerability type</option>
+                <option value="XSS">Cross-Site Scripting (XSS)</option>
+                <option value="SQL Injection">SQL Injection</option>
+                <option value="CSRF">Cross-Site Request Forgery (CSRF)</option>
+                <option value="Authentication">Authentication bypass / flaw</option>
+                <option value="Authorization">Authorization flaw (IDOR, etc)</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="severity">Severity Level</label>
+            <select id="severity">
+                <option value="Low">🟩 Low (Informational)</option>
+                <option value="Medium">⚠️ Medium (Moderate Risk)</option>
+                <option value="High">🔶 High (Significant Impact)</option>
+                <option value="Critical">🚨 Critical (System Compromise)</option>
+            </select>
+
+            <label for="poc">Proof of Concept (Code/Payload)</label>
+            <textarea id="poc" style="min-height: 80px; font-family: 'JetBrains Mono', monospace;" placeholder="<script>alert(1)</script>"></textarea>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="bountyEligibility">
+                <label for="bountyEligibility">I agree this submission follows the bounty program rules</label>
+            </div>
+        </div>
+
+        <button type="submit" id="submitBtn">
+            <span>Submit Report →</span>
+            <div class="spinner"></div>
+        </button>
+    </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Vulnerability Reporting Portal | Advanced Cybersecurity Project</p>
+</footer>
+
+<!-- Toast Notification -->
+<div id="toast">✅ Report submitted successfully!</div>
+
+<script src="script.js"></script>
+</body>
+</html>

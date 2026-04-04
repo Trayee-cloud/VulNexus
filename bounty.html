@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bug Bounty Program - VRP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <a href="index.html" style="text-decoration: none;"><h2>Vulnexus</h2></a>
+    <div class="nav-links">
+        <a href="bounty.html">Bug Bounty Program</a>
+        <a href="reports.html">View Reports</a>
+    </div>
+</nav>
+
+<!-- HEADER -->
+<header style="padding-bottom: 2rem;">
+    <h1>Bug Bounty Program</h1>
+    <p>
+        Help us secure our platform. We reward security researchers who disclose vulnerabilities responsibly.
+    </p>
+</header>
+
+<!-- OVERVIEW & SCOPE -->
+<section class="rules" style="margin-top: 0;">
+    <h2>🎯 Scope Definition</h2>
+    <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+        <div style="flex: 1; min-width: 250px;">
+            <h3 style="color: var(--accent-green); margin-bottom: 1rem;">✅ In Scope</h3>
+            <ul>
+                <li>Main web application (`*.example.com`)</li>
+                <li>Public APIs and endpoints</li>
+                <li>Authentication and Authorization flows</li>
+                <li>Business logic vulnerabilities</li>
+            </ul>
+        </div>
+        <div style="flex: 1; min-width: 250px;">
+            <h3 style="color: var(--accent-red); margin-bottom: 1rem;">❌ Out of Scope</h3>
+            <ul>
+                <li>Social engineering / Phishing</li>
+                <li>Physical attacks on infrastructure</li>
+                <li>Denial of Service (DoS / DDoS)</li>
+                <li>Automated scanning without consent</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- SEVERITY & REWARDS -->
+<section class="form-section" style="max-width: 800px;">
+    <h2>💰 Severity & Rewards</h2>
+    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Rewards are based on the impact of the vulnerability as determined by our security team.</p>
+    
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Severity</th>
+                    <th>Example Vulnerabilities</th>
+                    <th>Reward</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="severity-badge badge-Low">Low</span></td>
+                    <td>UI bugs, Info leak, Missing headers</td>
+                    <td><strong>$50</strong></td>
+                </tr>
+                <tr>
+                    <td><span class="severity-badge badge-Medium">Medium</span></td>
+                    <td>Stored XSS, Auth bypass, CSRF</td>
+                    <td><strong>$200</strong></td>
+                </tr>
+                <tr>
+                    <td><span class="severity-badge badge-High">High</span></td>
+                    <td>SQLi, Privilege escalation, SSRF</td>
+                    <td><strong>$500</strong></td>
+                </tr>
+                <tr>
+                    <td><span class="severity-badge badge-Critical">Critical</span></td>
+                    <td>RCE, Full takeover, Database dump</td>
+                    <td><strong>$1,000+</strong></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<!-- RULES -->
+<div class="laptop-wrapper">
+    <section class="mac-screen">
+        <div class="mac-header">
+            <div class="mac-dots">
+                <span class="red"></span>
+                <span class="yellow"></span>
+                <span class="green"></span>
+            </div>
+            <div class="mac-title">
+                <h4>RULES & GUIDELINES</h4>
+                <p>Learn Today. Lead Tomorrow</p>
+            </div>
+        </div>
+        <div class="mac-body">
+            <div class="mac-pill">
+                <div class="mac-pill-icon">⚡</div>
+                <span>Never attempt to modify, destroy, or access data belonging to other users.</span>
+            </div>
+            <div class="mac-pill">
+                <div class="mac-pill-icon">⚡</div>
+                <span>Do not disrupt our production systems or degrade user experience.</span>
+            </div>
+            <div class="mac-pill">
+                <div class="mac-pill-icon">⚡</div>
+                <span>Provide clear, step-by-step instructions to reproduce the vulnerability.</span>
+            </div>
+            <div class="mac-pill">
+                <div class="mac-pill-icon">⚡</div>
+                <span>Wait for our security team to resolve the issue before disclosing it publicly.</span>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- HALL OF FAME -->
+<section class="form-section" style="margin-bottom: 3rem;">
+    <h2>🏆 Hall of Fame</h2>
+    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">A massive thank you to the researchers who have helped secure our platform.</p>
+    
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Researcher</th>
+                    <th>Vulnerability Found</th>
+                    <th>Severity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>@CyberNinja</strong></td>
+                    <td>Remote Code Execution (RCE)</td>
+                    <td><span class="severity-badge badge-Critical">Critical</span></td>
+                </tr>
+                <tr>
+                    <td><strong>@JaneDoe1337</strong></td>
+                    <td>Stored Cross-Site Scripting (XSS)</td>
+                    <td><span class="severity-badge badge-Medium">Medium</span></td>
+                </tr>
+                <tr>
+                    <td><strong>@WhiteHatHero</strong></td>
+                    <td>SQL Injection in Login</td>
+                    <td><span class="severity-badge badge-High">High</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<!-- LIVE BOUNTY PAYOUTS (populated by backend) -->
+<section class="form-section" style="margin-bottom: 3rem;">
+    <h2>💸 Live Bounty Payouts</h2>
+    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+        Accepted and paid bounty submissions from our backend. Submit a bounty report to appear here.
+    </p>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Report ID</th>
+                    <th>Researcher</th>
+                    <th>Bug Type</th>
+                    <th>Severity</th>
+                    <th>Reward</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="liveBountyTableBody">
+                <tr>
+                    <td colspan="6" style="color: var(--text-secondary); text-align: center;">
+                        Loading live bounties…
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Vulnerability Reporting Portal | Advanced Cybersecurity Project</p>
+</footer>
+
+<script>
+    // ============================================================
+    //  Vulnexus – bounty.html inline script
+    //  Fetches accepted/paid bounty reports from backend
+    // ============================================================
+    (async function loadLiveBounties() {
+        const tbody = document.getElementById("liveBountyTableBody");
+        const API_BASE = "http://localhost:5000";
+
+        try {
+            const res = await fetch(`${API_BASE}/reports`);
+            if (!res.ok) throw new Error("Backend not reachable");
+
+            const reports = await res.json();
+
+            // Show only bounty-eligible reports that have been Resolved or Paid
+            const bountyReports = reports.filter(r =>
+                r.bountyEligible && (r.status === "Resolved" || r.status === "Paid")
+            );
+
+            if (bountyReports.length === 0) {
+                tbody.innerHTML = `
+                    <tr>
+                        <td colspan="6" style="color: var(--text-secondary); text-align: center;">
+                            No accepted bounties yet. Submit a bug bounty report to get started!
+                        </td>
+                    </tr>`;
+                return;
+            }
+
+            tbody.innerHTML = bountyReports.map(r => {
+                const sev = r.severity || "N/A";
+                const badgeClass = ["Critical","High","Medium","Low"].includes(sev)
+                    ? `severity-badge badge-${sev}`
+                    : "";
+                return `
+                    <tr>
+                        <td><strong>${r.id}</strong></td>
+                        <td>${r.name}</td>
+                        <td>${r.bugType !== "N/A" ? r.bugType : "—"}</td>
+                        <td>${badgeClass ? `<span class="${badgeClass}">${sev}</span>` : sev}</td>
+                        <td><strong>${r.reward}</strong></td>
+                        <td><span class="status-badge status-${r.status}">${r.status}</span></td>
+                    </tr>`;
+            }).join("");
+
+        } catch (err) {
+            console.error("Bounty fetch error:", err);
+            tbody.innerHTML = `
+                <tr>
+                    <td colspan="6" style="color: var(--accent-red, #ef4444); text-align: center;">
+                        ⚠️ Cannot reach backend at <strong>http://localhost:5000</strong>.
+                        Please start the server.
+                    </td>
+                </tr>`;
+        }
+    })();
+</script>
+</body>
+</html>
